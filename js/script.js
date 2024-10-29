@@ -14,7 +14,8 @@ async function main() {
         const cPokemon = await fetch(`${api}pokemon/${pokemon}`)
 
         const data = await cPokemon.json()
-        res.send(`<p>${data.abilities}</p>`)
+        const dataString = JSON.stringify(data.abilities[0].ability.name)
+        res.send(`<p style="background-color:red; display:inline">${dataString}</p>`)
     })
 
     app.listen(port, () => {
