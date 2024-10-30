@@ -11,11 +11,11 @@ app.get('/', (req, res) => {
 })
 
 app.get('/pokemon/:pokemon', async (req, res) => {
-    const pokemon = req.params.pokemon;
+    const pokemon = req.params.pokemon
     try {
         const cPokemon = await fetch(`${api}pokemon/${pokemon}`)
-        const data = await cPokemon.json()
-        res.json({ data })  // Enviamos solo la habilidad como JSON
+        const pokemonC = await cPokemon.json()
+        res.json({ pokemonC })  // Enviamos solo la habilidad como JSON
     } catch (error) {
         res.status(500).json({ error: 'Error fetching Pokémon data' })
     }
