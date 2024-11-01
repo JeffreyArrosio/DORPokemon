@@ -12,6 +12,9 @@
     <form id="form" method="get">
         <input type="text" name="pokemon">
         <input type="submit">
+        <datalist id="marcas">
+
+        </datalist>
     </form>
 
     <div class="card" style="width: 18rem;">
@@ -20,7 +23,11 @@
         <h5 class="card-title border text-center" id="p"></h5>
         <div class="card-body">
             <h6>Habilidades</h6>
+            <!-- <h3> Ese es el mio perro </h3> -->
             <p class="card-text" id="abilities"></p>
+        </div>
+        <div id="quinta">
+
         </div>
     </div>
 
@@ -34,39 +41,7 @@
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
 
-    <script>
-        let form = document.querySelector("#form")
-        form.addEventListener("submit", async function (event) {
-            event.preventDefault()
-            let pokemonC = document.querySelector("input[name=pokemon]").value
-            if (pokemonC) {
-                try {
-                    const res = await fetch(`http://localhost:3000/pokemon/${pokemonC}`)
-                    if (res.ok) {
-                        const data = await res.json()
-                        console.log(data.data);
-                        document.querySelector("#p").innerText = data.data.name
-                        let abDiv = document.querySelector("#abilities")
-                        abDiv.innerHTML = "";
-                        for (let i = 0; i < data.data.abilities.length; i++) {
-                            let pAb = document.createElement("p")
-                            pAb.innerText = data.data.abilities[i].ability.name
-                            console.log(data.data.abilities[i].ability.name);
-                            abDiv.appendChild(pAb)
-                        }
-                        let sprite = document.querySelector("#sprite")
-                        let sprite1 = document.querySelector("#sprite1")
-                        sprite.src = data.data.sprites.front_default
-                        sprite1.src = data.data.sprites.back_default
-                    } else {
-                        document.querySelector("#p").innerText = 'Error fetching Pokémon data'
-                    }
-                } catch (error) {
-                    document.querySelector("#p").innerText = 'Error: Network issue'
-                }
-            }
-        })
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
