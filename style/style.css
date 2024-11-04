@@ -1,0 +1,27 @@
+header{
+    background-image: url(../images/night-zekrom-and-day-reshiram-4t4fckjksqw4agsw.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 150px;
+}
+aside{
+    background-color: #C9A860;
+    z-index: 3;
+    min-height: 1000px;
+}
+main{
+    background-image: url(../images/800px-Ciudad_Porcelana.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+section{
+    padding: 15px;
+    background-color: #DEB8AA;
+}
+
+.youtube-audio {
+    width: 0;
+    height: 0;
+    border: none;
+}

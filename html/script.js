@@ -60,8 +60,6 @@ async function pokemonFifth() {
         }
         
     }
-   
-
 }
 
 function miData(termino) {
