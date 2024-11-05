@@ -1,8 +1,21 @@
+body{
+    font-family: "Tiny5", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 header{
     background-image: url(../images/night-zekrom-and-day-reshiram-4t4fckjksqw4agsw.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     min-height: 150px;
+}
+header h1{
+    color: yellow;
+    text-shadow:
+    4px 4px 0px blue,   
+    -4px 4px 0px blue,  
+    4px -4px 0px blue,  
+    -4px -4px 0px blue; 
 }
 aside{
     background-color: #C9A860;
@@ -31,4 +44,15 @@ section{
     top: 0; 
     max-height: 100vh; 
     overflow-y: auto; 
+}
+#aside2{
+    background-image: url(../images/pokead.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.juegos {
+    /* width: 100px;
+    height: 100px; */
 }
