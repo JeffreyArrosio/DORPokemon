@@ -25,3 +25,10 @@ section{
     height: 0;
     border: none;
 }
+
+.sticky-aside {
+    position: sticky; 
+    top: 0; 
+    max-height: 100vh; 
+    overflow-y: auto; 
+}
